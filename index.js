@@ -18,7 +18,7 @@ app.use(bodyParser.json());
 // POST Route - PDF generation and fetching of the data
 
 app.post('/create-pdf', (req, res) => {
-    console.log("In create pdf");
+    console.log("In create pdf Intial Changes");
     pdf.create(pdfTemplate(req.body), {}).toFile('Resume.pdf', (err) => {
         if(err){
             res.send(Promise.reject());
